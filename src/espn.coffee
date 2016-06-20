@@ -22,7 +22,7 @@ format_response = (league, response) ->
       break
     result_string += "${data[key]}\n"
     counter += 1
-  return sports_data if sports_data else "No scores to display for #{league.toUpperCase()}."
+  return "Scores:\n" + sports_data if sports_data else "No scores to display for #{league.toUpperCase()}."
 
 module.exports = (robot) ->
 
