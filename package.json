@@ -1,0 +1,14 @@
+{
+  "name": "hubot-espn",
+  "description": "Get live sports data for most major sports leagues!",
+  "version": "1.0.0",
+  "author": "Jack Serrino <jserrino@gmail.com>",
+  "license": "MIT",
+  "keywords": "hubot, hubot-espn, espn",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Detry322/hubot-espn.git"
+  },
+  "main": "index.coffee",
+  "dependencies": {}
+}
