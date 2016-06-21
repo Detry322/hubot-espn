@@ -13,9 +13,18 @@ Leagues available:
 Live score data accessible through `hubot espn NBA`, etc. Example Response:
 
 ```
-> hubot espn NBA
+> hubot espn MLB
 Scores:
-Cleveland 77   Golden State 76 (11:12 IN 4TH)
+- ^Arizona 3   Philadelphia 1 (FINAL)
+- San Francisco 0   Pittsburgh 0 (BOT 4TH)
+- Chicago Sox 1   Boston 0 (BOT 4TH)
+- Tampa Bay 3   Cleveland 1 (TOP 5TH)
+- Seattle 4   Detroit 3 (TOP 3RD)
+- Colorado 3   Miami 2 (TOP 4TH)
+- Baltimore 0   Texas 0 (TOP 1ST)
+- St. Louis 0   Chicago Cubs 0 (TOP 1ST)
+- LA Angels 0   Houston 0 (TOP 1ST)
+- Washington at LA Dodgers (10:00 PM ET)
 ```
 
 See [`src/espn.coffee`][espn] for full code.

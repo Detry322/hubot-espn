@@ -14,15 +14,14 @@ querystring = require 'querystring'
 
 format_response = (league, response) ->
   data = querystring.parse(response)
-  result_string = ""
-  counter = 1
-  while true
-    key = "#{league}_s_left#{counter}"
-    if key not in data
-      break
-    result_string += "${data[key]}\n"
-    counter += 1
-  return "Scores:\n" + sports_data if sports_data else "No scores to display for #{league.toUpperCase()}."
+  count = +data["#{league}_s_count"]
+  if count is 0
+    return "No scores to display for #{league.toUpperCase()}"
+  result_string = "Scores:\n"
+  for i in [1..count] by 1
+    key = "#{league}_s_left#{i}"
+    result_string += "- #{data[key]}\n"
+  return result_string
 
 module.exports = (robot) ->
 
