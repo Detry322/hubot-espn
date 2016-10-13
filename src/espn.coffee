@@ -28,7 +28,7 @@ module.exports = (robot) ->
   robot.respond /espn (mlb|nhl|nba|wnba|nfl)$/i, (res) ->
     league = res.match[1].toLowerCase()
     robot.http("http://espn.go.com/#{league}/bottomline/scores").get() (err, result, body) ->
-      if err or result.statusCode isnt 200
+      if err or result.statusCode >= 400
         res.send "There was a problem fetching score data :("
         return
       res.send format_response(league, body)
